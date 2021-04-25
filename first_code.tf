@@ -1,5 +1,6 @@
 provider "aws" {
     profile = "default"
+    project = "Joars start project"
     region = "eu-north-1"
     }
 
