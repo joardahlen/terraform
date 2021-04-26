@@ -4,6 +4,6 @@ provider "aws" {
     }
 
 resource "aws_s3_bucket" "tf-botta" {
-    bucket = "tf-course-20201202"
+    bucket = "tf-course-20210426"
     acl = "private"
 }
