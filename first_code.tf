@@ -3,7 +3,7 @@ provider "aws" {
     region = "eu-north-1"
     }
 
-resource "aws_s3_bucket" "tf_bucket" {
+resource "aws_s3_bucket" "tf-botta" {
     bucket = "tf-course-20201202"
     acl = "private"
 }
