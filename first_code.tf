@@ -3,8 +3,8 @@ provider "aws" {
     region = "us-west-2"
     }
 
-resource "aws_vpc" "default" {
-    cidr_block ="10.0.1.0/16"
+resource "aws_vpc" "vpc-1" {
+    cidr_block ="10.0.0.0/16"
     }
 #
 #resource "aws_s3_bucket" "botta-bucket" {
