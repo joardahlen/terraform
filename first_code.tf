@@ -21,6 +21,6 @@ resource "aws_subnet" "jgd_subnet" {
   availability_zone = "us-west-2a"
 
   tags = {
-    Name = "jgd_subnet-1"
+    Name = "jgd_subnet-10"
   }
 }
