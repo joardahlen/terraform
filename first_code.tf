@@ -5,9 +5,10 @@ provider "aws" {
 
 resource "aws_vpc" "jgd_vpc" {
     cidr_block ="10.0.0.0/16"
-    name ="VPC_JGD"
+    
     tags = {
     Owner = "JGD"
+    Name ="VPC_JGD"
     Environment = "Oregon"
     }
  }
