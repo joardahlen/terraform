@@ -45,8 +45,4 @@ resource "aws_instance" "jgd" {
     network_interface_id = aws_network_interface.jgd_NIC.id
     device_index         = 0
   }
-
-  credit_specification {
-    cpu_credits = "hvm"
-  }
 }
