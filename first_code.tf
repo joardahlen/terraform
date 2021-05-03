@@ -36,17 +36,16 @@ resource "aws_network_interface" "jgd_NIC" {
 }
 
 # Opprettelse av en instance
-resource "aws_instance" "jgd" {
-    # ami           = "ami-005e54dee72cc1d00" # us-west-2
-    ami ="ami-001628438d5d7d524"
-    instance_type = "t2.micro"
+#resource "aws_instance" "jgd" {
+#    ami ="ami-001628438d5d7d524"
+#   instance_type = "t2.micro"
 
-  tags = {
-    Name = "JGD_EC2_Instance"
-    }
+#  tags = {
+#    Name = "JGD_EC2_Instance"
+#    }
     
-  network_interface {
-    network_interface_id = aws_network_interface.jgd_NIC.id
-    device_index         = 0
-  }
-}
+#  network_interface {
+#    network_interface_id = aws_network_interface.jgd_NIC.id
+#    device_index         = 0
+#  }
+#}
