@@ -12,8 +12,12 @@ resource "aws_vpc" "jgd_vpc" {
     Environment = "Oregon"
     }
  }
-#
-#resource "aws_s3_bucket" "botta-bucket" {
-#    bucket = "tf-course-20210426-2"
-#    acl = "private"
-#}
+
+resource "aws_instance" "web" {
+  ami           = ami-001628438d5d7d524
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "Hello-JGD"
+  }
+}
