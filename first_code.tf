@@ -5,8 +5,12 @@ provider "aws" {
 
 resource "aws_vpc" "vpc-1" {
     cidr_block ="10.0.0.0/16"
-    tags ="JGD_VPC"
+    
+    tags = {
+    Owner = "JGD"
+    Environment = "Oregon"
     }
+ }
 #
 #resource "aws_s3_bucket" "botta-bucket" {
 #    bucket = "tf-course-20210426-2"
