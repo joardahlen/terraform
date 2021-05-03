@@ -38,7 +38,7 @@ resource "aws_network_interface" "jgd_NIC" {
 # Opprettelse av en instance
 resource "aws_instance" "jgd" {
     # ami           = "ami-005e54dee72cc1d00" # us-west-2
-    ami ="ami-03d5c68bab01f3496"
+    ami ="ami-001628438d5d7d524"
     instance_type = "t2.micro"
 
   network_interface {
