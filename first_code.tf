@@ -15,7 +15,7 @@ resource "aws_vpc" "jgd_vpc" {
  }
 
 # Opprettelse av et subnet
-resource "aws_subnet" "jgd_subnet" {
+resource "aws_subnet" "jgd_subnet-10" {
   vpc_id            = aws_vpc.jgd_vpc.id
   cidr_block        = "10.0.0.0/24"
   availability_zone = "us-west-2a"
