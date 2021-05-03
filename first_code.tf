@@ -13,9 +13,10 @@ resource "aws_vpc" "jgd_vpc" {
     }
  }
 
-resource "aws_instance" "web" {
+resource "aws_instance" "server-1" {
   ami           = ami-001628438d5d7d524
   instance_type = "t2.micro"
+  virtualization_type = "hvm"
 
   tags = {
     Name = "Hello-JGD"
