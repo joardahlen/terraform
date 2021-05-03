@@ -24,3 +24,13 @@ resource "aws_subnet" "jgd_subnet" {
     Name = "jgd_subnet-10"
   }
 }
+
+# opprettelse av NIC
+resource "aws_network_interface" "jgd_NIC" {
+  subnet_id   = aws_subnet.jgd_subnet-10.id
+  private_ips = ["10.0.0.10"]
+
+  tags = {
+    Name = "jgd_network_interface"
+  }
+}
