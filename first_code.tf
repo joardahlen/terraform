@@ -34,3 +34,18 @@ resource "aws_network_interface" "jgd_NIC" {
     Name = "jgd_network_interface"
   }
 }
+
+# Opprettelse av en instance
+resource "aws_instance" "jgd" {
+  ami           = "ami-005e54dee72cc1d00" # us-west-2
+  instance_type = "t2.micro"
+
+  network_interface {
+    network_interface_id = aws_network_interface.jgd_NIC.id
+    device_index         = 0
+  }
+
+  credit_specification {
+    cpu_credits = "standard"
+  }
+}
