@@ -41,6 +41,10 @@ resource "aws_instance" "jgd" {
     ami ="ami-001628438d5d7d524"
     instance_type = "t2.micro"
 
+  tags = {
+    Name = "JGD_EC2_Instance"
+    }
+    
   network_interface {
     network_interface_id = aws_network_interface.jgd_NIC.id
     device_index         = 0
