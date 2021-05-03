@@ -3,6 +3,7 @@ provider "aws" {
     region = "us-west-2"
     }
 
+# Opprettelse av en VPC
 resource "aws_vpc" "jgd_vpc" {
     cidr_block ="10.0.0.0/16"
     
@@ -13,3 +14,13 @@ resource "aws_vpc" "jgd_vpc" {
     }
  }
 
+# Opprettelse av et subnet
+resource "aws_subnet" "jgd_subnet" {
+  vpc_id            = aws_vpc.jgd_vpc.id
+  cidr_block        = "10.0.0.0/24"
+  availability_zone = "us-west-2a"
+
+  tags = {
+    Name = "jgd_subnet-1"
+  }
+}
